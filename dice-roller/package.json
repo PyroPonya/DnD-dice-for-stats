@@ -1,0 +1,11 @@
+{
+  "name": "dice-roller",
+  "version": "1.0.0",
+  "description": "dice roller for dnd 5e ruleset formula: [4d6kh]x6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "LetsEe @github.com/PyroPonya",
+  "license": "ISC"
+}
