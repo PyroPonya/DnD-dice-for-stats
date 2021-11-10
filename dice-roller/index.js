@@ -28,6 +28,13 @@ const diceMultiRoll = () => {
   currentRollFull.sort(function (a, b) {
     return b - a;
   });
+
+  for (let i = 0; i < 6; i++) {
+    if (currentRollFull[i] < 10) {
+      currentRollFull[i] = ("0" + currentRollFull[i]).replace(/\s/g, "");
+    }
+  }
+
   if (rollHystory.length < 6) {
     rollHystory.push(`${currentRollFull.slice(",").join(" - ")}`);
   } else {
