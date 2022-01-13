@@ -1,6 +1,12 @@
+* {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
 .rollerName {
   font-size: 30px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .container {
@@ -16,7 +22,9 @@
 }
 
 .containerBtn {
-  margin: 10px;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .btn {
@@ -26,7 +34,7 @@
   margin-bottom: 10px;
   box-shadow: -2px -2px 5px;
   font-size: 20px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .fieldValues {
@@ -37,9 +45,8 @@
 
 .rollVal {
   background-color: #fff;
-  height: 25px;
-  width: 25px;
-  padding: 5px;
+  height: 40px;
+  width: 40px;
   margin: 5px;
   border: 2px solid black;
   border-radius: 5px;
@@ -48,20 +55,19 @@
   align-items: center;
   box-shadow: -1px -1px 5px;
   font-size: 30px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .rollHistory {
-  height: 160px;
-  width: 270px;
-  padding: 5px;
-  padding-top: 15px;
+  min-height: 160px;
+  min-width: 270px;
+  padding: 15px;
   margin: 5px;
   background-color: #fff;
   border: 2px solid black;
   box-shadow: -1px -1px 5px;
   font-size: 20px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   display: flex;
   justify-content: center;
   align-items: flex-start;
