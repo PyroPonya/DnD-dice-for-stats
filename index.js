@@ -1,4 +1,7 @@
-const StandardArray5E = [15, 14, 13, 12, 10, 8];
+/*** hero_pool ***/
+const StandardArray5E = [17, 15, 13, 12, 10, 8];
+/*** classic ***/
+// const StandardArray5E = [15, 14, 13, 12, 10, 8];
 let currentRollFull = [0, 0, 0, 0, 0, 0];
 const rollHystory = [];
 const rollBtn = document.querySelector('.rollBtn');
@@ -11,7 +14,12 @@ const standardArray = () => {
 const diceRoll = () => {
   const currentRoll = [];
   for (let i = 0; i < 4; i++) {
-    currentRoll.push(Math.floor(Math.random() * 6 + 1));
+    let dSix = Math.floor(Math.random() * 6 + 1);
+    if (dSix == 1) {
+      /*** reroll 1's? ***/
+      ++dSix;
+    }
+    currentRoll.push(dSix);
   }
   currentRoll
     .sort(function (a, b) {
@@ -53,6 +61,12 @@ const diceMultiRoll = () => {
     } else if (
       currentRollFull[0] == arrWithMaxNum[0] &&
       currentRollFull[1] > arrWithMaxNum[1]
+    ) {
+      arrWithMaxNum = currentRollFull.map((el) => el);
+    } else if (
+      currentRollFull[0] == arrWithMaxNum[0] &&
+      currentRollFull[1] == arrWithMaxNum[1] &&
+      currentRollFull[2] > arrWithMaxNum[2]
     ) {
       arrWithMaxNum = currentRollFull.map((el) => el);
     }
